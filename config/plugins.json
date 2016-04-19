@@ -1,0 +1,23 @@
+{
+  "all": {
+    "names": "AdminTheme,Utils,SiteTheme"
+  },
+  "themes": {
+    "AdminTheme": {
+      "name": "Admin Theme",
+      "author": "Subhan Ahmed",
+      "version": "1.0"
+    },
+    "SiteTheme": {
+      "name": "Site Theme",
+      "author": "Subhan Ahmed",
+      "version": "1.0"
+    }
+  },
+  "active_theme": {
+    "name": "AdminTheme"
+  },
+  "active_plugins": {
+    "name": "AdminTheme,SiteTheme,Utils"
+  }
+}

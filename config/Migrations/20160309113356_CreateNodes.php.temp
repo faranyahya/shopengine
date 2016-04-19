@@ -1,0 +1,68 @@
+<?php
+use Migrations\AbstractMigration;
+
+class CreateNodes extends AbstractMigration
+{
+    /**
+     * Change Method.
+     *
+     * More information on this method is available here:
+     * http://docs.phinx.org/en/latest/migrations.html#the-change-method
+     * @return void
+     */
+    public function change()
+    {
+        $table = $this->table('nodes');
+        $table
+            ->addColumn('apps_id', 'integer', [
+                'default' => null,
+                'limit' => 11,
+                'null' => false,
+            ])
+            ->addColumn('categories_id', 'integer', [
+                'default' => null,
+                'limit' => 11,
+                'null' => true,
+            ])
+            ->addColumn('title', 'string', [
+                'default' => null,
+                'null' => true,
+            ])
+            ->addColumn('quantity', 'string', [
+                'default' => null,
+                'null' => true,
+            ])
+            ->addColumn('status', 'integer', [
+                'default' => null,
+                'null' => true,
+            ])
+            ->addColumn('price', 'string', [
+                'default' => null,
+                'null' => true,
+            ])
+            ->addColumn('thumb', 'string', [
+                'default' => null,
+                'limit' => 250,
+                'null' => true,
+            ])
+            ->addColumn('image', 'string', [
+                'default' => null,
+                'limit' => 250,
+                'null' => true,
+            ])
+            ->addColumn('created', 'timestamp', [
+                'default' => null,
+                'null' => true,
+            ])
+            ->addColumn('modified', 'timestamp', [
+                'default' => null,
+                'null' => true,
+            ])
+            ->addIndex(
+                [
+                    'apps_id',
+                ]
+            )
+            ->create();
+    }
+}
